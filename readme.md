@@ -1,9 +1,16 @@
-## TPC: Transformation-Specific Smoothing for Point Cloud Models
-We support common 3D semantic transformations including rotation, shearing, twisting, tapering as well as their compositions.
+
+
+# TPC
+
+In this repository, code is for our ICML 2022 paper [TPC: Transformation-Specific Smoothing for Point Cloud Models](https://arxiv.org/abs/2201.12733).
+
+We support common 3D semantic transformations including rotation, shearing, twisting, tapering, general linear transformation, as well as their compositions.
+
+## Installation
 
 The implementation is based on PyTorch framework, and requires GPU support. Before running the code, please install all dependencies according to `requirements.txt`.
 
-### File Structure
+## File Structure
 
 The root folder is created from Cohen et al's randomized smoothing code framework [(link)](https://github.com/locuslab/smoothing), while we modify and add more codes for our TPC framework as follows:
 
@@ -26,7 +33,7 @@ The root folder is created from Cohen et al's randomized smoothing code framewor
 
 
 
-### Usage
+## Usage
 
 In this section we demonstrate the training and certifying usage for each transformation by examples.
 
@@ -112,3 +119,28 @@ Example 3: to certify robustness for part segmentation task. Compute the point-w
 `python semantic/certify_segmentation.py shapenet models/segmentation/zrotate100/checkpoint.pth.tar 100 points-rotation data/segmentation/zrotate/180/log --skip 10 --batch 10000 --N 1000 --th 180 --device cuda:0`
 
 - `100`: the smoothing radius for the Gaussian distribution used for smoothing.
+
+
+
+## Citation
+
+If you find our work useful in your research, please consider citing:
+
+```
+@inproceedings{
+xie2020dba,
+title={DBA: Distributed Backdoor Attacks against Federated Learning},
+author={Chulin Xie and Keli Huang and Pin-Yu Chen and Bo Li},
+booktitle={International Conference on Learning Representations},
+year={2020},
+url={https://openreview.net/forum?id=rkgyS0VFvr}
+}
+```
+
+
+
+## Acknowledgement
+
+- [locuslab/smoothing](https://github.com/locuslab/smoothing)
+
+- [AI-secure/semantic-randomized-smoothing](https://github.com/AI-secure/semantic-randomized-smoothing)
