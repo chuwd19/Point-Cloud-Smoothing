@@ -127,13 +127,11 @@ Example 3: to certify robustness for part segmentation task. Compute the point-w
 If you find our work useful in your research, please consider citing:
 
 ```
-@inproceedings{
-xie2020dba,
-title={DBA: Distributed Backdoor Attacks against Federated Learning},
-author={Chulin Xie and Keli Huang and Pin-Yu Chen and Bo Li},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=rkgyS0VFvr}
+@inproceedings{li2022tpc,
+title={TPC: Transformation-Specific Smoothing for Point Cloud Models},
+author={Chu, Wenda and Li, Linyi and Li, Bo},
+booktitle={International Conference on Machine Learning},
+year={2022}
 }
 ```
 
